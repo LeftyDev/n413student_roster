@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10.18
--- https://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 11, 2017 at 04:45 PM
--- Server version: 5.1.73
--- PHP Version: 5.3.3
+-- Host: localhost:8889
+-- Generation Time: Jan 11, 2018 at 02:42 AM
+-- Server version: 5.6.33
+-- PHP Version: 7.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,10 +14,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `rscomer_db`
+-- Database: `rscomer`
 --
 
 -- --------------------------------------------------------
@@ -26,34 +26,48 @@ SET time_zone = "+00:00";
 -- Table structure for table `class_roster`
 --
 
-CREATE TABLE IF NOT EXISTS `class_roster` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `class_roster` (
+  `id` int(11) NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`),
-  KEY `id_2` (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+  `photo` varchar(512) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `class_roster`
 --
 
 INSERT INTO `class_roster` (`id`, `first_name`, `last_name`, `photo`) VALUES
-(1, 'In Kwon', 'Choi', 'https://instructure-uploads.s3.amazonaws.com/account_290000000098865/thumbnails/59892174/profile_thumb.jpg?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&Expires=1484524569&Signature=MCgExg34FDUj4eJO385bkx4Umto%3D'),
-(2, 'Haley', 'Rios', 'images/haley.jpg'),
-(3, 'Daniel', 'Gregorczyk', 'https://instructure-uploads.s3.amazonaws.com/account_290000000098865/thumbnails/55200985/profile_thumb.jpg?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&Expires=1484523319&Signature=RS54kFHumVFrqbOpF1YNxGnex7c%3D'),
-(4, 'Clinton', 'Jones', 'https://instructure-uploads.s3.amazonaws.com/account_290000000098865/thumbnails/57281146/profile_thumb.jpg?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&Expires=1484537505&Signature=O%2BQPBMOQTu4XpCjsxAIpnIWLfOQ%3D'),
-(5, 'Joshua', 'Lane', 'https://instructure-uploads.s3.amazonaws.com/account_290000000098865/thumbnails/59868891/profile_thumb.jpg?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&Expires=1484537505&Signature=oHWWs9zbypChflHmaBEwtcpiItk%3D'),
-(6, 'Rhett', 'Miller', 'images/rhett.jpg'),
-(7, 'Candace', 'Petty', 'https://instructure-uploads.s3.amazonaws.com/account_290000000098865/thumbnails/55082132/profile_thumb.jpg?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&Expires=1484537505&Signature=7e5jHiJMJENexwK7EuWRjvmQjFM%3D'),
-(8, 'Tori', 'Roessler', 'https://instructure-uploads.s3.amazonaws.com/account_290000000098865/thumbnails/54169957/profile_thumb.jpg?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&Expires=1484537506&Signature=75%2BQD9duQLfGZGXulg2QT0Qyh8w%3D'),
-(9, 'Thomas', 'Sewell', 'images/thomas.jpg'),
-(10, 'Charlie', 'Stanfield', 'https://instructure-uploads.s3.amazonaws.com/account_290000000098865/thumbnails/57194874/profile_thumb.jpg?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&Expires=1484537506&Signature=3b2NLT%2FxZePAJIqVETB2kqVeCZY%3D'),
-(11, 'Jaelen', 'Stewart', 'https://instructure-uploads.s3.amazonaws.com/account_290000000098865/thumbnails/54223256/profile_thumb.jpg?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&Expires=1484537505&Signature=aiQjv%2Bib7ZzoefHhDtEUyBTZlXA%3D'),
-(12, 'Robert', 'Sunderlin', 'https://instructure-uploads.s3.amazonaws.com/account_290000000098865/thumbnails/55113470/profile_thumb.jpg?AWSAccessKeyId=AKIAJFNFXH2V2O7RPCAA&Expires=1484539326&Signature=9pOL5bP5thi2snvTNqEE2EhDDSU%3D');
+(1, 'Merveil', 'Alisa', 'https://iu.instructure.com/images/thumbnails/58308704/H7e3u908HxksA8r7ixCOHLNMozH3bfmMcrQZJALc'),
+(2, 'Brian', 'Brown', 'https://iu.instructure.com/images/thumbnails/75664948/u9JFzgHALclw3yGx64PXtFYaDero62kVgp0gxNrh'),
+(3, 'Levi', 'Conklin', 'https://iu.instructure.com/images/thumbnails/58636699/tMZQ1BVly78BxLSgy3h9PTmVqdWtdj9xFW3XBPCL'),
+(4, 'Ashley', 'Conrad', 'https://iu.instructure.com/images/thumbnails/74379364/SSi8jWA85yxq8WagXMAbyqhOwSnAR3sLdg4H6cuL'),
+(5, 'Alexandra', 'Gentry', 'https://iu.instructure.com/images/thumbnails/59976833/wfs4mOuXWiuzJAhlT9t8NZRYEigJNMgCjrWUB9Jh'),
+(6, 'Derrick', 'Otte', 'https://iu.instructure.com/images/thumbnails/72154789/dx4YUBr7e5ntzkSQ3NF48RHhrdx84AegwTUJ228I'),
+(7, 'Haley', 'Rios', 'images/haley.jpg'),
+(8, 'Logan', 'Sotelo', 'https://iu.instructure.com/images/thumbnails/54189096/Lrk4WZfE6HH8l70W45UW8T8H58iwH2YgYPkOojay');
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `class_roster`
+--
+ALTER TABLE `class_roster`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD KEY `id_2` (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `class_roster`
+--
+ALTER TABLE `class_roster`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

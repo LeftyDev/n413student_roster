@@ -2,7 +2,7 @@
 include("php/n413connect.php");
 
 //find which week of class we are in
-$classStart = new DateTime('2017-01-11 12:00'); 
+$classStart = new DateTime('2018-01-11 12:00'); 
 $thisDate = new DateTime("now");
 $interval = $classStart->diff($thisDate);
 $days = $interval->format('%a');
