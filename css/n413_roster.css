@@ -2,7 +2,7 @@
 /* CSS Document */
 
 body {
-  padding-top: 50px;
+  padding-top: 90px;
 }
 
 .student {
@@ -10,6 +10,7 @@ body {
 	cursor: pointer;
 	border: solid 3px #eaeaea;
 	background-color: #f7f7f7;
+	margin-bottom: 3px;
 }
 
 .student:hover{
