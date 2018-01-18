@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
--- Host: localhost:8889
--- Generation Time: Jan 11, 2018 at 02:42 AM
--- Server version: 5.6.33
--- PHP Version: 7.0.12
+-- Host: 127.0.0.1:3308
+-- Generation Time: Jan 18, 2018 at 07:45 PM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `rscomer`
+-- Database: `n413 class_roster`
 --
 
 -- --------------------------------------------------------
