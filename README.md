@@ -1,3 +1,4 @@
-# N413_Roster
+# N413 Student Roster
 
-Example files for N413 Assignment Project 1 ("Listings")
+Brian Brown's N413 Assignment 1 -
+Simple SQL 

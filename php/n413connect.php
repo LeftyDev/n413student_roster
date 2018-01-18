@@ -1,10 +1,10 @@
 <?php
 ////////////////////// MAMP version ///////////////////////
 
-	$dbhost = 'localhost:8889';
+	$dbhost = 'localhost';
 	$dbuser = 'root';
 	$dbpwd  = 'root';
-	$dbname = 'rscomer';  //'<your MAMP database name>';
+	$dbname = 'n413 class_roster';  //'<your MAMP database name>';
 
 	$link = mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname);
 

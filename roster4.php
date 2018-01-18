@@ -6,15 +6,16 @@ $result = mysqli_query($link, $query);
 
 $students = Array();
 while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
-	
-	$students[] = Array( 	"id" => $row["id"],
-							"first_name" => $row["first_name"],
-							"last_name" => $row["last_name"],
-							"photo" => $row["photo"] );
+	$students[] = Array(
+        "id" => $row["id"],
+        "first_name" => $row["first_name"],
+        "last_name" => $row["last_name"],
+        "photo" => $row["photo"]
+    );
 }
 ?>
 
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -25,14 +26,15 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
         <script src="js/bootstrap.js"></script>
         <title>Student Roster</title>
         <script type="text/javascript">
-			function click_me(id){
-				alert("You clicked student number "+id);
+			function student_clicked(student_id){
+				alert("You have selected student #" + student_id + ".");
 			}
 		</script>
     </head>
     
     <body>
-    	<!-- BEGIN Bootstrap Navbar -->
+
+    	<!-- Bootstrap Navbar -->
     	<nav class="navbar navbar-inverse navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
@@ -42,7 +44,7 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">N413 Roster</a>
+              <a class="navbar-brand" href="#">N413 Student Roster&nbsp;&nbsp;&nbsp;</a>
             </div>
             <div id="navbar" class="collapse navbar-collapse">
               <ul class="nav navbar-nav">
@@ -50,24 +52,28 @@ while ($row = mysqli_fetch_array($result, MYSQLI_BOTH)){
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
-            </div><!--/.nav-collapse -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><button type="button" class="btn btn-default navbar-btn">Login</button></li>
+                    <li>&nbsp;</li>
+                    <li><button type="button" class="btn btn-default navbar-btn">Sign Up</button></li>
+                </ul>
+            </div>
           </div>
         </nav>
-        <!-- END Bootstrap Navbar -->
+
         <div class="container">
           <div class="row">
-            <div class="col-md-2"></div> <!-- 2-column spacer -->
-            <div class="col-md-10"> <!-- column for content -->
+            <div class="col-md-12">
     <?php
     foreach ($students as $student){
-        echo '
-				<div id="student_'.$student["id"].'" class="student" onclick="javascript:click_me(\''.$student["id"].'\');">
-					<img src="'.$student["photo"].'" height="30"> '.$student["first_name"].' '.$student["last_name"].'
-				</div>';
+        echo '<div id="student_' . $student["id"] . '" class="student" onclick="student_clicked(\'' . $student["id"] . '\');">
+				<img src="' . $student["photo"] . '" height="75">&nbsp;&nbsp;&nbsp;' . $student["last_name"] . ', ' . $student["first_name"] . '
+			  </div>';
     }
     ?>
-    		</div> <!-- /col-md-10 -->
-    	  </div> <!-- /.row -->
-    	</div>  <!-- /.container -->
+    		</div>
+    	  </div>
+    	</div>
+
     </body>
 </html>

@@ -2,30 +2,16 @@
 /* CSS Document */
 
 body {
-  padding-top: 90px;
+  padding-top: 50px;
 }
 
 .student {
-	margin-top:0.3em;
-	margin-bottom:0.3em;
-	width:200px;
-	cursor:hand;
-	cursor:pointer;
-	border:solid 1px #000;
-	border-radius:3px;
-	background-color:#f4f4f4;
+	width: 100%;
+	cursor: pointer;
+	border: solid 3px #eaeaea;
+	background-color: #f7f7f7;
 }
 
-.present-student {
-	margin-top:0.3em;
-	margin-bottom:0.3em;
-	width:200px;
-	border:solid 1px #000;
-	border-radius:3px;
-	background-color:#f4f4f4;
-}
-
-.present-student:hover,
 .student:hover{
 	background-color:#ffffff;
 }
